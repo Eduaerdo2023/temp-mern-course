@@ -10,7 +10,7 @@ const PageBtnContainer = () => {
   const pages = Array.from({ length: numOfPages }, (_, index) => index + 1)
 
   const { search, pathname } = useLocation()
-  console.log(search);
+
   const navigate = useNavigate()
 
   const handlePageChange = (pageNumber) => {

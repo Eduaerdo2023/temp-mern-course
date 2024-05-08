@@ -1,4 +1,4 @@
-import { Form, useSubmit, Link } from 'react-router-dom'
+import {  useSubmit, Link, Form } from 'react-router-dom'
 import { FormRow, FormRowSelect } from '.'
 import Wrapper from '../assets/wrappers/DashboardFormPage'
 import { JOB_TYPE, JOB_STATUS, JOB_SORT_BY } from '../../../utils/constants'
@@ -24,7 +24,7 @@ const SearchContainer = () => {
 
   return (
     <Wrapper >
-      <form className='form'>
+      <Form className='form'>
         <h5 className='form-title'>search form</h5>
         <div className="form-center">
           <FormRow
@@ -59,15 +59,14 @@ const SearchContainer = () => {
             onChange={(e) => {
               submit(e.currentTarget.form)
             }} />
-
-          <Link to='/dashboard/all-jobs'
-            className='btn form-btn delete-btn' >Reset search values</Link>
-
+          <Link 
+          to='/dashboard/all-jobs' 
+          className='btn form-btn delete-btn' 
+          > Reset search values
+          </Link>
         </div>
-
-      </form>
+      </Form>
     </Wrapper>
   )
 }
-
 export default SearchContainer

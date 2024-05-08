@@ -20,6 +20,8 @@ export const loader =async() => {
 }
 
 const DashboardLayout = ( { isDarkThemeEnabled }) => {
+  const navigation = useNavigation()
+  const isSubmitting = navigation.state === 'submitting'
   const { user } = useLoaderData()
   const navigate = useNavigate()
   
@@ -51,7 +53,8 @@ const DashboardLayout = ( { isDarkThemeEnabled }) => {
           <div>
             <Navbar />
             <div className="dashboard-page">
-              <Outlet context={{ user }}/>
+         
+              {isSubmitting?<h1>Loading</h1> : <Outlet context={{ user }}/>}
             </div>
           </div>
         </main>

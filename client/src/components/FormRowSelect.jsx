@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FormRowSelect = ({name, labeText, list, defaultValue= '', onChange }) => {
+const FormRowSelect = ({name, labeText, list, defaultValue, onChange }) => {
   return (
     <div className="form-row">
     <label htmlFor={name} className="form-label">{labeText || name}</label>
